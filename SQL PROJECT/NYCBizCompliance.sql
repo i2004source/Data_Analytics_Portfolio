@@ -419,21 +419,21 @@
 
 
 --Question 3: Which Boroughs experienced the greatest inspection activity?
-Select Borough, COUNT(InspectionStatus) as no_of_inspections
-From DCWP_Inspections
-where InspectionStatus NOT LIKE 'Closed' 
-	AND InspectionStatus NOT LIKE 'No Evidence of Activity'
-	AND InspectionStatus NOT LIKE 'No Violation Issued'
-	AND InspectionStatus NOT LIKE 'No Warning Issued'
-	AND InspectionStatus NOT LIKE 'Out of Business'
-	AND InspectionStatus NOT LIKE 'Pass'
-GROUP BY Borough
-Order By Count(InspectionStatus) DESC;
+--Select Borough, COUNT(InspectionStatus) as no_of_inspections
+--From DCWP_Inspections
+--where InspectionStatus NOT LIKE 'Closed' 
+	--AND InspectionStatus NOT LIKE 'No Evidence of Activity'
+	--AND InspectionStatus NOT LIKE 'No Violation Issued'
+	--AND InspectionStatus NOT LIKE 'No Warning Issued'
+	--AND InspectionStatus NOT LIKE 'Out of Business'
+	--AND InspectionStatus NOT LIKE 'Pass'
+--GROUP BY Borough
+--Order By Count(InspectionStatus) DESC;
 
-Select Borough, COUNT(InspectionStatus) as no_of_inspections
-From DCWP_Inspections
-GROUP BY Borough
-Order By Count(InspectionStatus) DESC;
+--Select Borough, COUNT(InspectionStatus) as no_of_inspections
+--From DCWP_Inspections
+--GROUP BY Borough
+--Order By Count(InspectionStatus) DESC;
 
 --Question 4: What inspection outcomes occurs most frequently?
 --Select InspectionStatus, Count(*) as No_of_Outcomes
@@ -726,21 +726,21 @@ Order By Count(InspectionStatus) DESC;
 --    SELECT
 --        CASE
 --            WHEN DaysToFirstInspection <= 30
---                THEN '0–30 days'
+--                THEN '0Â–30 days'
 --            WHEN DaysToFirstInspection <= 90
---                THEN '31–90 days'
+--                THEN '31Â–90 days'
 --            WHEN DaysToFirstInspection <= 180
---                THEN '91–180 days'
+--                THEN '91Â–180 days'
 --            WHEN DaysToFirstInspection <= 365
---                THEN '181–365 days'
+--                THEN '181Â–365 days'
 --            WHEN DaysToFirstInspection <= 730
---                THEN '1–2 years'
+--                THEN '1Â–2 years'
 --            WHEN DaysToFirstInspection <= 1095
---                THEN '2–3 years'
+--                THEN '2Â–3 years'
 --            WHEN DaysToFirstInspection <= 1825
---                THEN '3–5 years'
+--                THEN '3Â–5 years'
 --            WHEN DaysToFirstInspection <= 3650
---                THEN '5–10 years'
+--                THEN '5Â–10 years'
 --            WHEN DaysToFirstInspection <= 7300
 --                THEN '10-20 years'
 --            ELSE '20+ years'
